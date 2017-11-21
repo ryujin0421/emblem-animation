@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Emblem - Auto generate circular text</title>
+   <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
+    <style>
+        /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background-image: url(img/background.jpg);
+            background-position:center;
+            font-family: 'Arial';
+        }
+        
+        .emblem {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 25vh;
+            margin: 0 auto;
+            width: 50vh;
+            height: 50vh;
+            border-radius: 50%;
+            font-weight: bold;
+            color: #ffffff;
+            font-family: 'Graduate', cursive;
+            font-weight: 900;
+            animation: spinZ 20s linear infinite;
+            text-align: center;
+        }
+        
+        .emblem span {
+            position: absolute;
+            display: inline-block;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            text-transform: uppercase;
+            font-size: 5vh;
+            transition: all 0.5s cubic-bezier(0, 0, 0, 1);
+        }
+        
+        @keyframes spinZ {
+            0% {
+                transform: rotateZ(360deg);
+            }
+            100% {
+                transform: rotateZ(0deg);
+            }
+        }
+        
+        .img {
+            position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%); /* Safari用 */
+  transform: translate(-50%, -50%);
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+    <div class="emblem">RYUJIN*WASBORN*</div>
+    <div class="img">
+        <img src="img/ryujin_icon.png" alt="">
+    </div>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
